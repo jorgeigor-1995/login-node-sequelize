@@ -1,0 +1,48 @@
+
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbiI6InJvb3RAYmFja21vZGVsLmNvbS5iciIsIl9pZCI6IjVlODYzOWRiMTY1ODA3MTI5ZDkyNGRlYyIsImlhdCI6MTU4NTg1NTExMiwiZXhwIjoxNTg1OTQxNTEyfQ.nSlrjjVNF98YWMIPlaNMIlvLtBS3BixbGVdu72GKVlA
+@url = http://localhost:9090/api
+
+###
+# Novo Usuário
+POST {{url}}/v1/usuarios?token={{token}}
+Content-Type: application/json
+
+{
+  "nome": "Jorge",
+  "login": "Igor",
+  "password": "jorge1234"
+}
+
+
+###
+# Listagem Usuários
+POST {{url}}/v1/usuarios/list?token={{token}}
+Content-Type: application/json
+
+{ }
+
+
+###
+# Buscar por ID 
+@_id = 5e863c268fd0ce1270e362fd
+GET {{url}}/v1/usuarios/{{_id}}?token={{token}}
+Content-Type: application/json
+
+
+###
+# Deletar Usuario
+@_id = 5e863c268fd0ce1270e362fd
+DELETE {{url}}/v1/usuarios/{{_id}}?token={{token}}
+Content-Type: application/json
+
+
+###
+# Editar Usuario
+@_id = 5e863c268fd0ce1270e362fd
+PUT {{url}}/v1/usuarios/?token={{token}}
+Content-Type: application/json
+
+{
+  "_id": "5e8639db165807129d924dec",
+  "nome": "RootJorge"
+}
