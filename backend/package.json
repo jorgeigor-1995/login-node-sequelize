@@ -11,7 +11,7 @@
   "keywords": [],
   "description": "",
   "dependencies": {
-    "async": "^1.5.0",
+    "async": "^2.6.4",
     "bcrypt": "^4.0.1",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.14.1",
